@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Single Page Application </title>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        body{
+            background-image:linear-gradient( to left, lightblue, lightyellow,lightblue)
+        }
+        .nav{
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 10pt;
+            background-color: black;
+            font-size: larger;
+            opacity: 0.5;
+            color: white;
+        }
+        li{
+            display: inline-block;
+            margin-left: 13%;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+        #home{
+            display: none;
+        }
+        #about{
+            display: none;
+        }
+        #contact{
+            display: none;
+        }
+        
+    </style>
+    <div class="nav">
+    <ul>
+       <li id="ho"> Home </li>
+       <li> | </li>
+       <li id="ab"> About </li>
+       <li> | </li>
+       <li id="co"> Contact </li>
+    </ul>
+</div>
+    <p id="home"> Welcome Home </p>
+    <p id="about"> This is more about us </p>
+    <p id="contact"> Reach us on Facebook </p>
+    <img src="Tiger.webp" height="500" width="500" alt="">
+
+<script>
+    $(document).ready(function() {
+        $("#ho").click(function() {
+            $("#ho").css("color","orangered") 
+            $("#ab").css("color","white")
+            $("#co").css("color","white")
+            $("#home").show() 
+            $("#about").hide()
+            $("#contact").hide()
+        })
+    })
+    $(document).ready(function() {
+        $("#ab").click(function() {
+            $("#ab").css("color","orangered")
+            $("#ho").css("color","white")
+            $("#co").css("color","white")
+            $("#about").show() 
+            $("#home").hide()
+            $("#contact").hide()
+        })
+    })
+    $(document).ready(function() {
+        $("#co").click(function() {
+            $("#co").css("color","orangered")
+            $("#ab").css("color","white")
+            $("#ho").css("color","white")
+            $("#contact").show() 
+            $("#about").hide()
+            $("#home").hide()
+        })
+    })
+</script>
+
+</body>
+</html>
